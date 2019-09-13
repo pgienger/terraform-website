@@ -29,7 +29,7 @@ The rest of this page explains the on-premise GitLab versions of these steps.
 
 1. Open your GitLab instance in your browser and log in as whichever account you want Terraform Cloud to act as. For most organizations this should be a dedicated service user, but a personal account will also work.
 
-    ~> **Important:** The account you use for connecting Terraform Cloud **must have admin (master) access** to any shared repositories of Terraform configurations, since creating webhooks requires admin permissions. Do not create the application as an administrative application not owned by a user; Terraform Cloud needs user access to repositories to create webhooks and ingress configurations.
+    ~> **Important:** The account you use for connecting Terraform Cloud **must have admin (maintainer in versions after 11.0) access** to any shared repositories of Terraform configurations, since creating webhooks requires admin permissions. Do not create the application as an administrative application not owned by a user; Terraform Cloud needs user access to repositories to create webhooks and ingress configurations.
 
     ~> **Important**: In GitLab CE or EE 10.6 and up, you may also need to enable **Allow requests to the local network from hooks and services** on the "Outbound requests" section inside the Admin area under Settings (`/admin/application_settings`). Refer to [the GitLab documentation](https://docs.gitlab.com/ee/security/webhooks.html) for details.
 
